@@ -1,0 +1,208 @@
+@dark: rgba(38, 42, 46, 1);
+@pink: rgba(246, 31, 91, 1);
+@yellow: rgba(253, 184, 49, 1);
+@light: rgba(245, 248, 250, 1);
+@light_blue: rgba(213, 214, 214, 1);
+
+/*основные стили*/
+html{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: @dark;
+}
+.container{
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2% 0 4% 0;
+    overflow: hidden;
+}
+.heading{
+    font-size: 24px;
+    font-weight: 500;
+}
+.large_heading{
+    font-size: 40px;
+    font-weight: 700;
+}
+.small_heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+.small_text{
+    font-size: 16px;
+}
+.bold{
+    font-weight: 700;
+}
+.hidden{
+    display: none;
+}
+.text_red{
+    color: @pink;
+}
+.text_yellow{
+    color: @yellow;
+}
+.text_blue{
+    color: @light_blue;
+}
+
+/*header*/
+.main_header{
+    background-color: @dark;
+}
+.main_header>.container{
+    padding: 1% 0 2% 0;
+}
+
+/*флексы*/
+.main_navigation, .site_navigation,
+.prewiev_content{
+    display: flex;
+}
+.main_navigation, .site_navigation{
+    align-items: center;
+}
+.main_navigation{
+    justify-content: space-between;
+}
+/*флексы енд*/
+
+
+.site_navigation{
+    column-gap: 40px;
+}
+.navigation_link{
+    color: @light;
+    font-size: 500;
+}
+.navigation_link:hover, .logo:hover{
+    color: @pink;
+    text-shadow: 2px 1px 3px rgba(245, 248, 250, 0.50);
+    transition-duration: 0.4s;
+}
+.logo{
+    color: @light;
+}
+.logo:hover{
+    color: @yellow;
+}
+
+/*кнопки и поля формы*/
+.button{
+    min-width: 200px;
+    border-radius: 100px;
+    border: none;
+    padding: 0.7% 3%;
+    font-weight: 600;
+}
+.button:disabled{
+    opacity: .4;
+}
+.input:disabled{
+    opacity: .4;
+}
+.button:hover, .input:focus,
+.button:focus{
+    transition: 0.4s;
+}
+.button_yellow{
+    background-color: @yellow;
+    color: @dark;
+}
+.button_yellow:hover{
+    background-color: darken(@yellow, 15%);
+    box-shadow: 0 1px 4px @light;
+    color: @light;
+}
+.button_dark{
+    background-color: @dark;
+    color: @light_blue;
+}
+.button_dark:hover{
+    background-color: darken(@dark, 15%);
+    box-shadow: 0 1px 4px @light;
+    color: @light;
+}
+.button_pink{
+    background-color: @pink;
+    color: @light;
+}
+.button_pink:hover{
+    background-color: darken(@pink, 15%);
+    box-shadow: 0 1px 4px @light;
+    color: @light;
+}
+.input{
+    font-family: 'Nunito Sans', sana-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid @yellow;
+    padding: 0.9% 10% 0.9% 0.9%;
+    border-radius: 100px;
+}
+.input:focus{
+    outline: none;
+    box-shadow: 0 1px 4px @light;
+    border: 2px solid @dark;
+    color: @dark;
+}
+
+/*превью раздел*/
+.site_prewiev{
+    height: 700px;
+}
+.backg{
+    width: 100%;
+    height: 90%;
+    background-color: @dark;
+    position: relative;
+    color: @light;
+}
+.backg::after {
+    display: block; // это блочный элемент
+    content: ''; // без него псевдоэлемент не отрисуется
+    width: 100%; // на всю ширину блока-родителя
+    height: 80px; // высота скошенного края
+    position: absolute; // позиционируем относительно block
+    top: 100%; // пристроим к верхней части блока
+    left: 0; // пристроим к левой части блока
+    background: linear-gradient(to bottom right, @dark 48%, rgba(255,0,0,0) 50%);
+}
+.author{
+    color: @light_blue;
+    font-weight: 600;
+    position: relative;
+    height: 700px;
+}
+.author_picture_back{
+    background-color: @light_blue;
+    height: 525px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+.author_picture, .author_picture_back{
+    width: 350px;
+    border-radius: 3%;
+}
+.author_picture_description{
+    position: absolute;
+
+}
+.author_picture{
+    position: absolute;
+    z-index: 10;
+}
