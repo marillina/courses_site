@@ -9,10 +9,17 @@ html{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 body{
+    color: @dark;
     font-size: 18px;
     font-family: 'Nunito Sans', sans-serif;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 ul{
     list-style: none;
@@ -29,11 +36,12 @@ a{
     overflow: hidden;
 }
 .heading{
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 5%;
 }
 .large_heading{
-    font-size: 40px;
+    font-size: 54px;
     font-weight: 700;
 }
 .small_heading{
@@ -58,6 +66,20 @@ a{
 .text_blue{
     color: @light_blue;
 }
+.text_light{
+    color: @light;
+}
+.centered{
+    text-align: center;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+}
+.crossed_out{
+    color: @light_blue;
+    text-decoration: line-through;
+}
+
 
 /*header*/
 .main_header{
@@ -69,13 +91,24 @@ a{
 
 /*флексы*/
 .main_navigation, .site_navigation,
-.prewiev_content{
+.prewiev_content, .courses_for_list,
+.rewies_list, .user-info,
+.about_list_item, .about_list,
+.about_icon, .promo_container,
+.about_author_container,
+.stages_list, .plans_list,
+.hit_plan, .user_info,
+.socials_list{
     display: flex;
 }
-.main_navigation, .site_navigation{
+.main_navigation, .site_navigation,
+.courses_for_list, .user-info,
+.about_list_item, .promo_container{
     align-items: center;
 }
-.main_navigation{
+.main_navigation, .courses_for_list,
+.rewies_list, .stages_list, .plans_list,
+.hit_plan{
     justify-content: space-between;
 }
 /*флексы енд*/
@@ -95,6 +128,7 @@ a{
 }
 .logo{
     color: @light;
+    font-size: 24px;
 }
 .logo:hover{
     color: @yellow;
@@ -102,11 +136,19 @@ a{
 
 /*кнопки и поля формы*/
 .button{
+    line-height: 0;
+    min-height: 40px;
     min-width: 200px;
     border-radius: 100px;
     border: none;
-    padding: 0.7% 3%;
+    height: 30px;
+    padding: 1% 3%;
     font-weight: 600;
+    font-size: smaller;
+    cursor: pointer;
+}
+.button_link{
+    padding: 1.5% 6%;
 }
 .button:disabled{
     opacity: .4;
@@ -149,16 +191,31 @@ a{
     font-family: 'Nunito Sans', sana-serif;
     font-size: 14px;
     font-weight: 500;
-    border: 2px solid @yellow;
-    padding: 0.9% 10% 0.9% 0.9%;
+    border: 1px solid @yellow;
+    /*min-height: 40px;
+    min-width: 200px;*/
+    height: 30px;
+    padding: 1% 3%;
     border-radius: 100px;
 }
 .input:focus{
     outline: none;
     box-shadow: 0 1px 4px @light;
-    border: 2px solid @dark;
+    border: 1px solid @dark;
     color: @dark;
 }
+.input_control{
+    line-height: 0;
+    margin-bottom: 2%;
+    .small_text{
+        font-size: 14px;
+        margin-left: 1%;
+    }
+    .input{
+        width: 100%;
+    }
+}
+
 
 /*превью раздел*/
 .site_prewiev{
@@ -181,28 +238,384 @@ a{
     left: 0; // пристроим к левой части блока
     background: linear-gradient(to bottom right, @dark 48%, rgba(255,0,0,0) 50%);
 }
+.prewiev_content_inner{
+    width: 40%;
+}
+.button_link{
+    margin-top: 10%;
+}
 .author{
-    color: @light_blue;
-    font-weight: 600;
     position: relative;
-    height: 700px;
+    margin-left: auto;
+    margin-right: 10%;
 }
 .author_picture_back{
     background-color: @light_blue;
     height: 525px;
-    position: absolute;
-    top: 0;
-    left: 5%;
 }
 .author_picture, .author_picture_back{
     width: 350px;
     border-radius: 3%;
 }
-.author_picture_description{
-    position: absolute;
-
-}
 .author_picture{
+    animation: moving_backward 2s infinite;
+    animation-direction: alternate;
+}
+.author_picture_back{
+    animation: moving_forward 2s infinite;
+    animation-direction: alternate;
+}
+.author_picture_container{
     position: absolute;
-    z-index: 10;
+    left: -15%;
+    z-index: 1;
+}
+.author_picture_content{
+    position: relative;
+}
+.author_picture_description{
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    color: @light;
+    z-index: 1;
+}
+@keyframes moving_forward{
+    0% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+@keyframes moving_backward{
+    0% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(-6deg);
+    }
+}
+
+/*раздел о курсах*/
+.about_back{
+    background-color: @light;
+    width: 650px;
+    height: 750px;
+    border-radius: 100%;
+    transform: rotate(-25deg) skew(30deg);
+    margin: 0 auto;
+}
+.about_container{
+    position: relative;
+}
+.about_content{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 58%;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 500;
+    color: @dark;
+}
+.fa-chevron-down{
+    color: @yellow;
+    animation: bouncing 1s infinite;
+    animation-direction: alternate;
+}
+@keyframes bouncing {
+    0%{
+        transform: translateY(1px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+/*кому подходит курс*/
+
+//граница зигзаг
+.zigzag_border{
+    overflow: hidden;
+    height: 34px;
+}
+.zigzag_border_yellow{
+    fill: @yellow;
+}
+.zigzag_border_dark{
+    fill: @dark;
+}
+.zigzag_border_rotated{
+    transform: rotate(180deg);
+}
+.courses_for{
+    background-color: @yellow;
+}
+.courses_for_list_item{
+    background-color: @light;
+    width: 220px;
+    height: 200px;
+    border-radius: 4%;
+    padding: 2%;
+    text-align: center;
+    .fa-solid{
+        color: @pink;
+        font-size: 60px;
+    }
+    cursor: default;
+}
+.courses_for_list_item:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+
+/*что говорят участники о курсе*/
+.rewievs_list_item{
+    width: 40%;
+}
+.user_avatar{
+    width: 70px;
+    height: 70px;
+    margin-right: 3%;
+}
+.user_avatar img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+
+/*о курсе*/
+.about_courses{
+    background-color: @dark;
+    color: @light;
+}
+.about_list{
+    gap: 10%;
+}
+.about_list_item{
+    min-width: 25%;
+}
+.about_icon{
+    color: @dark;
+    background-color: @yellow;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    .fa-regular{
+        align-self: center;
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    margin-right: 4%;
+}
+
+/*промо форма*/
+.promo_form .input_control{
+    width: 70%;
+}
+.promo_form_info{
+    background-color: @dark;
+    width: 500px;
+    height: 300px;
+    border-radius: 100%;
+    transform: skew(-5deg);
+    color: @light_blue;
+    font-weight: 600;
+}
+.promo_list{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+.promo_list_item_1{
+    transform: rotate(-3deg);
+}
+.promo_list_item_2{
+    margin: 10% 0;
+}
+.promo_list_item_3{
+    transform: rotate(3deg);
+}
+
+/*об авторе*/
+.backf{
+    position: relative;
+}
+.backf::after {
+    display: block; // это блочный элемент
+    content: ''; // без него псевдоэлемент не отрисуется
+    width: 100%; // на всю ширину блока-родителя
+    height: 80px; // высота скошенного края
+    position: absolute; // позиционируем относительно block
+    top: 100%; // пристроим к верхней части блока
+    left: 0; // пристроим к левой части блока
+    background: linear-gradient(to bottom left, @dark 48%, rgba(255,0,0,0) 50%);
+}
+.about_author{
+    background-color: @dark;
+    color: @light;
+}
+.about_author_content{
+    width: 50%;
+    font-weight: 500;
+}
+.about_author_content p{
+    line-height: 2;
+    font-size: larger;
+}
+
+/*стадии курса*/
+.stages_container{
+    text-align: center;
+    margin-top: 10%;
+}
+.stage_number{
+    position: relative;
+    background-color: @pink;
+    color: @light;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+}
+/*.stage_number::after{
+    background-color: @pink;
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    display: block;
+    top: 0;
+    left: 0;
+}*/
+.stage_number p{
+    align-self: center;
+    margin: 0 auto;
+}
+.stages_list_item{
+    width: 25%;
+}
+.stages_list_item p{
+    line-height: 1.3;
+}
+
+/*тарифы*/
+.plans{
+    background-color: @yellow;
+}
+.plans_list_item{
+    background-color: @light;
+    color: @dark;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 2%;
+    width: 25%;
+}
+.yellow_line{
+    background-color: @yellow;
+    height: 2px;
+    width: 100%;
+}
+.hit_mark{
+    background-color: @pink;
+    color: @light;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    align-self: center;
+    text-align: center;
+}
+.hit_mark p{
+    margin: 0 auto;
+    align-self: center;
+}
+.price{
+    margin: 2% 0 7% 0;
+}
+.current_price{
+    font-size: larger;
+}
+.old_price{
+    margin-left: 30%;
+}
+
+
+/*раздел с отзывами*/
+.rewievs .container{
+    position: relative;
+    height: 100%;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.rewiev_content{
+    background-color: @light;
+    border-radius: 20px;
+    padding: 5%;
+    width: 300px;
+    height: 200px;
+    line-height: 1.4;
+    margin-bottom: 5%;
+}
+.rate{
+    font-size: smaller;
+    line-height: 0;
+}
+
+/*форма для заполнения*/
+.form_desc, .form_backgrounded{
+    position: relative;
+}
+.back_yellow{
+    width: 800px;
+    height: 500px;
+    background-color: @yellow;
+    border-radius: 100%;
+    transform: skew(20deg);
+}
+.form_info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    padding: 3% 0 0 6%;
+}
+.form_front{
+    z-index: 20;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: 1px solid @yellow;
+    border-radius: 20px;
+    padding: 2%;
+    width: 400px;
+    height: 200px;
+}
+
+/*подвал*/
+.main-footer{
+    background-color: @dark;
+    color: @light;
+}
+.socials_list{
+    gap: 2%;
+    margin-top: 4%;
+}
+.social_icon{
+    background-color: @light;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    .fa-brands{
+        font-size: 26px;
+        line-height: 0;
+        align-self: center;
+        margin: 0 auto;
+    }
 }

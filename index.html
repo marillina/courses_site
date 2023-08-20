@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="css/dist/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
-    <script src="less.min.js" ></script>
+
+    <!--swiper slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="js/less.min.js" ></script>
 </head>
 <body>
     <div class="wrapper">
         <header class="main_header">
             <div class="container">
                 <nav class="main_navigation">
-                    <a href="index.html" class="large_heading bold logo">Илья Макаров</a>
+                    <a href="index.html" class="bold logo">Илья Макаров</a>
                     <ul class="site_navigation">
                         <li class="site_navigation_item">
                             <a href="#fits" class="navigation_link">
@@ -54,19 +57,21 @@
                 <div class="backg">
                     <div class="container">
                         <div class="prewiev_content">
-                            <div>
+                            <div class="prewiev_content_inner">
                                 <p class="small_text">🔥 Старт курса: 25 июля в 17:00 (Мск)</p>
                                 <p class="large_heading bold">21 день, чтобы сформировать <span class="text_red">новую привычку</span></p>
-                                <p class="heading text_blue">Полностью измените себя всего за 15 минут в день</p>
-                                <a href="#plans" class="button button_yellow">Оставить заявку</a>
+                                <p class="small_heading text_blue">Полностью измените себя всего за 15 минут в день</p>
+                                <a href="#plans" class="button button_link button_yellow">Оставить заявку</a> 
                             </div>
                             <div class="author">
                                 <div class="author_picture_container">
-                                    <div class="author_picture_description">
-                                        <p>Автор курса: Илья Макаров</p>
-                                        <p class="small_text">Кто я такой?</p>
+                                    <div class="author_picture_content">
+                                        <div class="author_picture_description">
+                                            <p>Автор курса: Илья Макаров</p>
+                                            <p class="small_text">Кто я такой?</p>
+                                        </div>
+                                        <img src="media/images/author.png" alt="Автор" class="author_picture">
                                     </div>
-                                    <img src="media/images/author.png" alt="Автор" class="author_picture">
                                 </div>
                                 <div class="author_picture_back"></div>
                             </div>
@@ -76,122 +81,161 @@
             </div>
             <section class="about">
                 <div class="container">
-                    <h2 class="hidden">О курсах</h2>
-                    <p>Рассеянность внимания приобретается в течение жизни человека. Но <strong>это можно изменить.</strong> Чтобы проще осваивать материал в учебе и на работе, концентрироваться на важных для вас вещах мы создали курсы разваития концентрации и устойчивости внимания, переключения внимания и правильного восприятия.</p>
-                    <p>Мы собрали <strong>лучшие методики</strong>, полезные приемы и упражнения для быстрого развития памяти. Уделяя этому несколько минут в день, вы сможете развить умение эффективного запоминания даже самой сложной информации.</p>
-                    <p>Навык скорочтения позволит вам быть <strong>более эффективными</strong> во время обучения и на работе. Онлайн курс не только поможет овладеть навыком быстрого прочтения материала, но лучше его усваивать и запоминать.</p>
-                    <a href="#" class="link_from_about"><img src="media/images/icons/" alt="Стрелка вниз"></a>
+                    <div class="about_container">
+                        <div class="about_back"></div>
+                        <div class="about_content">
+                            <h2 class="hidden">О курсах</h2>
+                            <p>Рассеянность внимания приобретается в течение жизни человека. Но <strong>это можно изменить.</strong> Чтобы проще осваивать материал в учебе и на работе, концентрироваться на важных для вас вещах мы создали курсы разваития концентрации и устойчивости внимания, переключения внимания и правильного восприятия.</p>
+                            <p>Мы собрали <strong>лучшие методики</strong>, полезные приемы и упражнения для быстрого развития памяти. Уделяя этому несколько минут в день, вы сможете развить умение эффективного запоминания даже самой сложной информации.</p>
+                            <p>Навык скорочтения позволит вам быть <strong>более эффективными</strong> во время обучения и на работе. Онлайн курс не только поможет овладеть навыком быстрого прочтения материала, но лучше его усваивать и запоминать.</p>
+                            <a href="#fits" class="link_from_about"><i class="fa-solid fa-chevron-down"></i></a>   
+                        </div>
+                           
+                    </div>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="courses_for">
                 <div class="container">
                     <a id="fits"></a>
                     <h2 class="heading">Этот курс точно вам подойдет, если:</h2>
                     <ul class="courses_for_list">
                         <li class="courses_for_list_item">
-                            <img src="media/images/icons/" alt="Фортуна" class="big_icon">
-                            <span class="yellow-line"></span>
+                            <div class="big_icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+                            <div class="yellow-line"></div>
                             <p>Вы готовы <strong>перевернуть</strong> свое мышление на 360 градусов</p>
                         </li>
                         <li class="courses_for_list_item">
-                            <img src="media/images/icons/" alt="Бицепс" class="big_icon">
-                            <span class="yellow-line"></span>
+                            <div class="big_icon"><i class="fa-solid fa-dumbbell"></i></div>
+                            <div class="yellow-line"></div>
                             <p>Хотите <strong>увеличить продуктивность</strong> в работе в 2 раза</p>
                         </li>
                         <li class="courses_for_list_item">
-                            <img src="media/images/icons/" alt="Человек у ноутбука" class="big_icon">
-                            <span class="yellow-line"></span>
+                            <div class="big_icon"><i class="fa-solid fa-user-secret"></i></div>
+                            <div class="yellow-line"></div>
                             <p>Планируете стать <strong>частью</strong> активного <strong>сообщества</strong></p>
                         </li>
                         <li class="courses_for_list_item">
-                            <img src="media/images/icons/" alt="Академическая шапочка" class="big_icon">
-                            <span class="yellow-line"></span>
+                            <div class="big_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="yellow-line"></div>
                             <p>Вам нужно получить <strong>сертификат</strong> прохождения курса</p>
                         </li>
                     </ul>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_yellow zigzag_border_rotated">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="rewievs">
                 <div class="container">
                     <h2 class="heading">Что говорят участники о курсе</h2>
                     <ul class="rewies_list">
                         <li class="rewievs_list_item">
-                            <p>Смог победить свою лень!</p>
+                            <p class="small_heading">Смог победить свою лень!</p>
                             <p>Я получил огромную поддержку от ребят и возможность понять, 
                                 как нужно привлекать клиентов. Сервис очень классный! Буду работать с ними и дальше!</p>
                             <div class="user-info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <p class="user_name">Владислав Макаров</p>
+                                <div class="user_avatar">
+                                    <img src="media/images/users/user1.png" alt="Пользователь">
+                                </div>
+                                <p class="user_name small_heading">Владислав Макаров</p>
                             </div>
                         </li>
                         <li class="rewievs_list_item">
-                            <p>Смог победить свою лень!</p>
-                            <p>Я получил огромную поддержку от ребят и возможность понять, 
-                                как нужно привлекать клиентов. Сервис очень классный! Буду работать с ними и дальше!</p>
+                            <p class="small_heading">Автор курса — профессионал</p>
+                            <p>Мне все понравилось. До этого опыта в сфере привлечения у меня не было. 
+                                Узнала много новой и полезной информации. Рекомендую всем знакомым ABC agency.</p>
                             <div class="user-info">
-                                <img src="media/images/reviews/user2.jpg" alt="Пользователь" class="user_avatar">
-                                <p class="user_name">Алина Попова</p>
+                                <div class="user_avatar">
+                                    <img src="media/images/users/user2.png" alt="Пользователь">
+                                </div>
+                                <p class="user_name small_heading">Алина Попова</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="about_courses">
                 <div class="container">
                     <h2 class="heading">Что внутри курса</h2>
                     <ul class="about_list">
                         <li class="about_list_item">
-                            <img src="media/images/icons/calendar.jpg" alt="Календарь" class="about_icon">
+                            <div class="about_icon">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
                             <div>
-                                <p class="small_heading">21 день</p>
+                                <p class="small_heading text_yellow">21 день</p>
                                 <p>-продолжительность</p>
                             </div>
                         </li>
                         <li class="about_list_item">
-                            <img src="media/images/icons/ratio.jpg" alt="Рупор" class="about_icon">
+                            <div class="about_icon">
+                                <i class="fa-regular fa-face-tired"></i>
+                            </div>
                             <div>
-                                <p class="small_heading">16 часов</p>
+                                <p class="small_heading text_yellow">16 часов</p>
                                 <p>вебинаров</p>
                             </div>
                         </li>
                         <li class="about_list_item">
-                            <img src="media/images/icons/document.jpg" alt="Документ" class="about_icon">
+                            <div class="about_icon">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
                             <div>
-                                <p class="small_heading">14+</p>
+                                <p class="small_heading text_yellow">14+</p>
                                 <p>домашних заданий</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_dark zigzag_border_rotated">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="promo_form">
                 <div class="container">
                     <div class="promo_container">
-                        <h2 class="heading">Запишитесь на курс прямо сейчас и получите бонусы</h2>
-                        <form action="#" method="get">
-                            <div class="input_control">
-                                <input type="text" name="name" id="name" class="input" placeholder="Имя*" required>
-                            </div>
-                            <div class="input_control">
-                                <input type="phone" name="phone" id="phone" class="input" placeholder="Телефон*" required>
-                                <p class="small_text">Чтобы наш менеджер смог уточнить детали</p>
-                            </div>
-                            <div class="input_control">
-                                <input type="email" name="email" id="email" class="input" placeholder="E-mail*" required>
-                                <p class="small_text">Сюда придет подтверждение</p>
-                            </div>
-                            <input type="submit" value="Хочу бонусы" class="button button_yellow">
-                        </form>
-
+                        <div class="promo_content_form">
+                            <h2 class="heading">Запишитесь на курс прямо сейчас и получите бонусы</h2>
+                            <form action="#" method="get" class="promo_form">
+                                <div class="input_control">
+                                    <input type="text" name="name" id="name" class="input" placeholder="Имя*" required>
+                                </div>
+                                <div class="input_control">
+                                    <input type="phone" name="phone" id="phone" class="input" placeholder="Телефон*" required>
+                                    <p class="small_text">Чтобы наш менеджер смог уточнить детали</p>
+                                </div>
+                                <div class="input_control">
+                                    <input type="email" name="email" id="email" class="input" placeholder="E-mail*" required>
+                                    <p class="small_text">Сюда придет подтверждение</p>
+                                </div>
+                                <div class="input_control">
+                                    <input type="submit" value="Хочу бонусы" class="button button_yellow">
+                                </div>
+                            </form>
+                        </div>
                         <div class="promo_form_info">
                             <ol class="promo_list">
-                                <li class="promo_list_item">
+                                <li class="promo_list_item_1">
                                     Дополнительный доступ к курсу +30 дней к тарифу!
                                 </li>
-                                <li class="promo_list_item">
+                                <li class="promo_list_item_2">
                                     Лучшие домашние задания учеников с прошлых потоков
                                 </li>
-                                <li class="promo_list_item">
+                                <li class="promo_list_item_3">
                                     Скидка 10% для друга
                                 </li>
                             </ol>
@@ -200,51 +244,65 @@
                 </div>
             </section>
             <section class="about_author">
-                <div class="container">
-                    <a id="author"></a>
-                    <h2 class="heading">Автор курса- Илья Макаров</h2>
-                    <p>
-                        <span class="finger_icon"></span>
-                        Сделал нишевое агентство со среднемесячной чистой прибюылью 1450 000 рублей и командой
-                        из 15 удаленных сотрудников
-                    </p>
-                    <p>
-                        <span class="finger_icon"></span>
-                        Закрыли 100 клиентов на создание системы привлечения клиентов, с которых получилии более 300
-                        абонентских платежей
-                    </p>
-                    <p>
-                        <span class="finger_icon"></span>
-                        За первый год заработал 4,5 млн, за второй год заработал 15,1 млн рублей,
-                        затем выгодно продал агентство и зафиксировал прибыль
-                    </p>
-                    <div class="author">
-                        <img src="media/images/author.jpg" alt="Автор" class="author_picture">
-                        <div class="author_picture_back"></div>
+                <div class="backf">
+                    <div class="container">
+                        <div class="about_author_container">
+                            <div class="about_author_content">
+                                <a id="author"></a>
+                                <h2 class="heading">Автор курса - Илья Макаров</h2>
+                                <p>
+                                    👉🏻 Сделал нишевое агентство со среднемесячной чистой прибюылью 1450 000 рублей и командой
+                                    из 15 удаленных сотрудников
+                                </p>
+                                <p>
+                                    👉🏻 Закрыли 100 клиентов на создание системы привлечения клиентов, с которых получилии более 300
+                                    абонентских платежей
+                                </p>
+                                <p>
+                                    👉🏻 За первый год заработал 4,5 млн, за второй год заработал 15,1 млн рублей,
+                                    затем выгодно продал агентство и зафиксировал прибыль
+                                </p>
+                            </div>
+                            <div class="author">
+                                <div class="author_picture_container">
+                                    <div class="author_picture_content">
+                                        <img src="media/images/author.png" alt="Автор" class="author_picture">
+                                    </div>
+                                </div>
+                                <div class="author_picture_back"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="course_stages">
                 <div class="container">
                     <div class="stages_container">
+                        <h2 class="heading">За время курса вы</h2>
                         <ul class="stages_list">
                             <li class="stages_list_item">
-                                <p class="stage_number">1</p>
-                                <p>Узнаете себя</p>
+                                <div class="stage_number">
+                                    <p class="small_heading bold">1</p>
+                                </div>
+                                <p class="small_heading bold">Узнаете себя</p>
                                 <p>Определите свою начальную точку, чтобы уверенно
                                     двигаться к своей цели
                                 </p>
                             </li>
                             <li class="stages_list_item">
-                                <p class="stage_number">2</p>
-                                <p>Прокачаете навыки</p>
+                                <div class="stage_number">
+                                    <p class="small_heading bold">2</p>
+                                </div>
+                                <p class="small_heading bold">Прокачаете навыки</p>
                                 <p>Курс рассчитан не только на новичков, полезную информацию 
                                     найдут и опытные участники
                                 </p>
                             </li>
                             <li class="stages_list_item">
-                                <p class="stage_number">3</p>
-                                <p>Наладите контакты</p>
+                                <div class="stage_number">
+                                    <p class="small_heading bold">3</p>
+                                </div>
+                                <p class="small_heading bold">Наладите контакты</p>
                                 <p>"Человек - карета; ум - кучер;
                                     деньги и знакомства - лошади;
                                     чем более лощадей, тем скорее и быстрее карета 
@@ -252,239 +310,224 @@
                                 </p>
                             </li>
                         </ul>
-                       <span class="stages_line"></span> 
                     </div>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="plans">
                 <div class="container">
                     <a id="plans"></a>
                     <h2 class="hidden">Тарифы курса</h2>
-                    <p class="heading">Выберите удобный формат участия</p>
+                    <p class="heading text_light centered">Выберите удобный формат участия</p>
                     <ul class="plans_list">
                         <li class="plans_list_item">
-                            <h3 class="small_heading">Тариф #1</h3>
+                            <h3 class="small_heading bold">Тариф #1</h3>
                             <span class="yellow_line"></span>
-                            <ul class="plan_description_list">
-                                <li class="plan_description_list_item">
-                                    Программа обучения 21 день
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Электронная рабочая тетрадь для домашних заданий
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Общий чат
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Доступ к заданиям 7 дней после окончания курса
-                                </li>
-                                <li class="plan_description_list_item crossed_out">
-                                    Дополнительные задания и материалы
-                                </li>
-                                <li class="plan_description_list_item crossed_out">
-                                    Обратная связь от Ильи
-                                </li>
-                                <li class="plan_description_list_item crossed_out">
-                                    3 реальных заказа после окончания курса
-                                </li>
-                            </ul>
+                            <div class="plan_description">
+                                <p>Программа обучения 21 день</p>
+                                <p>Электронная рабочая тетрадь для домашних заданий</p>
+                                <p>Общий чат</p>
+                                <p>Доступ к заданиям 7 дней после окончания курса</p>
+                                <p class="crossed_out">Дополнительные задания и материалы</p>
+                                <p class="crossed_out">Обратная связь от Ильи</p>
+                                <p class="crossed_out">3 реальных заказа после окончания курса</p>
+                            </div>
                             <span class="yellow_line"></span>
                             <p class="small_text">Количество мест:20</p>
                             <div class="price">
-                                <span class="current_price">2 900 ₽</span>
-                                <span class="old_price">6 900 ₽</span>
+                                <span class="current_price bold">2 900 ₽</span>
+                                <span class="old_price crossed_out">6 900 ₽</span>
                             </div>
                             <button class="primary_button button button_dark">Оплатить участие</button>
                         </li>
                         <li class="plans_list_item">
                             <div class="hit_plan">
-                                <h3 class="small_heading">Тариф #2</h3>
-                                <span class="hit_mark">Хит</span>
+                                <h3 class="small_heading bold">Тариф #2</h3>
+                                <div class="hit_mark">
+                                    <p class="small_heading bold">хит</p>
+                                </div>
                             </div>
                             <span class="yellow_line"></span>
-                            <ul class="plan_description_list">
-                                <li class="plan_description_list_item">
-                                    Программа обучения 21 день
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Электронная рабочая тетрадь для домашних заданий
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Общий чат
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Доступ к заданиям 7 дней после окончания курса
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Дополнительные задания и материалы
-                                </li>
-                                <li class="plan_description_list_item crossed_out">
-                                    Обратная связь от Ильи
-                                </li>
-                                <li class="plan_description_list_item crossed_out">
-                                    3 реальных заказа после окончания курса
-                                </li>
-                            </ul>
+                            <div class="plan_description">
+                                <p>Программа обучения 21 день</p>
+                                <p>Электронная рабочая тетрадь для домашних заданий</p>
+                                <p>Общий чат</p>
+                                <p>Доступ к заданиям 7 дней после окончания курса</p>
+                                <p>Дополнительные задания и материалы</p>
+                                <p class="crossed_out">Обратная связь от Ильи</p>
+                                <p class="crossed_out">3 реальных заказа после окончания курса</p>
+                            </div>
                             <span class="yellow_line"></span>
                             <p class="small_text">Количество мест:20</p>
                             <div class="price">
-                                <span class="current_price">8 900 ₽</span>
-                                <span class="old_price">14 900 ₽</span>
+                                <span class="current_price bold">8 900 ₽</span>
+                                <span class="old_price crossed_out">14 900 ₽</span>
                             </div>
                             <button class="primary_button button button_dark">Оплатить участие</button>
                         </li>
                         <li class="plans_list_item">
-                            <h3 class="small_heading">Тариф #3</h3>
+                            <h3 class="small_heading bold">Тариф #3</h3>
                             <span class="yellow_line"></span>
-                            <ul class="plan_description_list">
-                                <li class="plan_description_list_item">
-                                    Программа обучения 21 день
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Электронная рабочая тетрадь для домашних заданий
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Общий чат
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Доступ к заданиям 7 дней после окончания курса
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Дополнительные задания и материалы
-                                </li>
-                                <li class="plan_description_list_item">
-                                    Обратная связь от Ильи
-                                </li>
-                                <li class="plan_description_list_item">
-                                    3 реальных заказа после окончания курса
-                                </li>
-                            </ul>
+                            <div class="plan_description">
+                                <p>Программа обучения 21 день</p>
+                                <p>Электронная рабочая тетрадь для домашних заданий</p>
+                                <p>Общий чат</p>
+                                <p>Доступ к заданиям 7 дней после окончания курса</p>
+                                <p>Дополнительные задания и материалы</p>
+                                <p>Обратная связь от Ильи</p>
+                                <p>3 реальных заказа после окончания курса</p>
+                            </div>
                             <span class="yellow_line"></span>
                             <p class="small_text">Количество мест:20</p>
                             <div class="price">
-                                <span class="current_price">21 900 ₽</span>
-                                <span class="old_price">37 900 ₽</span>
+                                <span class="current_price bold">21 900 ₽</span>
+                                <span class="old_price crossed_out">37 900 ₽</span>
                             </div>
                             <button class="primary_button button button_dark">Оплатить участие</button>
                         </li>
                     </ul>
                 </div>
             </section>
+            <div class="zigzag_border zigzag_border_yellow zigzag_border_rotated">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                    <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+                </svg>
+            </div>
             <section class="rewievs">
                 <div class="container">
                     <a id="rewievs"></a>
                     <h3 class="hidden">Отзывы участников прошлых потоков</h3>
                     <p class="heading">Все еще сомневаетесь?</p>
                     <p>Посмотрите отзывы участников прошлых потоков</p>
-                    <div class="rewievs_slider">
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Долго искали, нашли здесь!
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Посетил много мероприятий, посвященных этой теме. 
+                                        Ребята - молодцы, рассказали интересно и по делу, без лишней информации. Было полезно.
+                                    </div>
                                 </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
+                                <div class="user_info">
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user1.png" alt="Пользователь">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Владислав Макаров</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Отвечают на все вопросы
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Мне все понравилось. До этого опыта в сфере привлечения у меня не было. 
+                                        Узнала много новой и полезной информации. Рекомендую всем знакомым ABC agency.
+                                    </div>
+                                </div>
                                 <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user2.png" alt="Пользователь" class="user_avatar">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Маргарита Иванова</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Лучший сервис, который мы видели
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
+                                        Сервис очень классный! Буду работать с ними дальше.
+                                    </div>
+                                </div>
+                                <div class="user_info">
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user3.jpg" alt="Пользователь" class="user_avatar">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Татьяна Щеглова</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Долго искали, нашли здесь!
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Посетил много мероприятий, посвященных этой теме. 
+                                        Ребята - молодцы, рассказали интересно и по делу, без лишней информации. Было полезно.
+                                    </div>
+                                </div>
+                                <div class="user_info">
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user1.png" alt="Пользователь" class="user_avatar">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Владислав Макаров</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Отвечают на все вопросы
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Мне все понравилось. До этого опыта в сфере привлечения у меня не было. 
+                                        Узнала много новой и полезной информации. Рекомендую всем знакомым ABC agency.
+                                    </div>
+                                </div>
+                                <div class="user_info">
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user2.png" alt="Пользователь" class="user_avatar">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Маргарита Иванова</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rewiev_content">
+                                    <div class="rewiev_header">
+                                        Лучший сервис, который мы видели
+                                    </div>
+                                    <div class="rewiev_text">
+                                        Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
+                                        Сервис очень классный! Буду работать с ними дальше.
+                                    </div>
+                                </div>
+                                <div class="user_info">
+                                    <div class="user_avatar">
+                                        <img src="media/images/users/user3.jpg" alt="Пользователь" class="user_avatar">
+                                    </div>
+                                    <div>
+                                        <p class="user_name">Татьяна Щеглова</p>
+                                        <div class="rate">🔥🔥🔥🔥🔥</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
-                                </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
-                                </div>
-                            </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
-                                </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
-                                </div>
-                            </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
-                                </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
-                                </div>
-                            </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
-                                </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
-                                </div>
-                            </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewievs_slide">
-                            <div class="rewiev_content">
-                                <div class="rewiev_header">
-                                    Лучший сервис, который мы видели
-                                </div>
-                                <div class="rewiev_text">
-                                    Я получила огромную поддержку от ребят и возможность понять, как нужно привлекать клиентов. 
-                                    Сервис очень классный! Буду работать с ними дальше.
-                                </div>
-                            </div>
-                            <div class="rewiev_info">
-                                <img src="media/images/reviews/user1.jpg" alt="Пользователь" class="user_avatar">
-                                <div class="user_info">
-                                    <p class="user_name">Татьяна Щеглова</p>
-                                    <div class="rate"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -492,18 +535,22 @@
                 <div class="container">
                     <a id="contacts"></a>
                     <div class="form_desc">
-                        <div>
-                            <p class="heading">Я уверен в качестве своего курса</p>
-                            <p>Если по какой-то причине курс вам не подойдет,
-                                напишите мне в течение 7 дней после старта,
-                                и мы оформим полный возврат стоимости.</p>
-                            <p>
-                                Гарантия результата.
-                                Если после прохождения курса и выполнения всех заданий, вы решите,
-                                что он не окупился, я также верну вам деньги*
-                            </p>
+                        <div class="form_backgrounded">
+                            <div class="back_yellow"></div>
+                            <div class="form_info">
+                                <p class="heading">Я уверен в качестве своего курса</p>
+                                <p>Если по какой-то причине курс вам не подойдет,
+                                    напишите мне в течение 7 дней после старта,
+                                    и мы оформим полный возврат стоимости.</p>
+                                <p>
+                                    Гарантия результата.
+                                    Если после прохождения курса и выполнения всех заданий, вы решите,
+                                    что он не окупился, я также верну вам деньги*
+                                </p>
+                                <p class="small_text">* при условии предоставления выполненных домашних заданий</p>
+                            </div>
                         </div>
-                        <form action="#" method="get">
+                        <form action="#" method="get" class="form_front">
                             <div class="input_control">
                                 <input type="text" name="name" id="name" class="input" placeholder="Имя*" required>
                             </div>
@@ -515,13 +562,17 @@
                                 <input type="email" name="email" id="email" class="input" placeholder="E-mail*" required>
                                 <p class="small_text">Сюда придет подтверждение</p>
                             </div>
-                            <input type="submit" value="Записаться и проверить свои силы" class="button button_pink">
+                            <input type="submit" value="Записаться и проверить свои силы" class="button button_pink centered">
                         </form>
                     </div>
-                    <p class="small_text">* при условии предоставления выполненных домашних заданий</p>
                 </div>
             </section>
         </main>
+        <div class="zigzag_border zigzag_border_dark zigzag_border">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2145 43">
+                <path d="M43 0.57373L78.5 36.0732L114 0.57373L149.5 36.0732L185 0.57373L220.5 36.0732L256 0.57373L291.5 36.0732L327 0.57373L362.5 36.0732L398 0.57373L433.5 36.0732L469 0.57373L504.5 36.0732L540 0.57373L575.5 36.0732L611 0.57373L646.5 36.0732L682 0.57373L717.5 36.0732L753 0.57373L788.5 36.0732L824 0.57373L859.5 36.0732L895 0.57373L930.5 36.0732L966 0.57373L1001.5 36.0732L1037 0.57373L1072.5 36.0732L1108 0.57373L1143.5 36.0732L1179 0.57373L1214.5 36.0732L1250 0.57373L1285.5 36.0732L1321 0.57373L1356.5 36.0732L1392 0.57373L1427.5 36.0732L1463 0.57373L1498.5 36.0732L1534 0.57373L1569.5 36.0732L1605 0.57373L1640.5 36.0732L1676 0.57373L1711.5 36.0732L1747 0.57373L1782.5 36.0732L1818 0.57373L1853.5 36.0732L1889 0.57373L1924.5 36.0732L1960 0.57373L1995.5 36.0732L2031 0.57373L2066.5 36.0732L2102 0.57373L2144.43 43H0.573242L43 0.57373Z"></path>
+            </svg>
+        </div>
         <footer class="main-footer">
             <div class="container">
                 <ul class="company_info">
@@ -532,28 +583,33 @@
                 </ul>
                 <ul class="socials_list">
                     <li class="socials_list_item">
-                        <a href="#">
-                            <img src="media/images/icons_social/youtube" alt="Youtube">
+                        <a href="#" class="social_icon">
+                            <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
                     <li class="socials_list_item">
-                        <a href="#">
-                            <img src="media/images/icons_social/vk" alt="Vkontakte">
+                        <a href="#" class="social_icon">
+                            <i class="fa-brands fa-vk"></i>
                         </a>
                     </li>
                     <li class="socials_list_item">
-                        <a href="#">
-                            <img src="media/images/icons_social/tg" alt="Telegram">
+                        <a href="#" class="social_icon">
+                            <i class="fa-brands fa-telegram"></i>
                         </a>
                     </li>
                     <li class="socials_list_item">
-                        <a href="#">
-                            <img src="media/images/icons_social/whatsup" alt="WhatsUp">
+                        <a href="#" class="social_icon">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </li>
                 </ul>
             </div>
         </footer> 
     </div>
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/3102186097.js" crossorigin="anonymous"></script>
 </body>
 </html>
